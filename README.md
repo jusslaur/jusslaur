@@ -1,4 +1,0 @@
-- 👋 Hi, I’m: @jusslaur
-- 👀 I’m interested in: Industrial Automation
-- 📫 How to reach me: johannes@prt.ee
-- ⚡ Fun fact: I'm enormously faster than you
