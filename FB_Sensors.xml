@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="instDeviceSensor_010BX1" Datatype="&quot;deviceSensor&quot;">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+  </Section>
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>FB_Sensors</Name>
+      <Namespace />
+      <Number>16</Number>
+      <ProgrammingLanguage>LAD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource />
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>----- FILTER -----</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="8" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="mAlarmReset" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB_Sensor" />
+        <Component Name="010BX1" />
+      </Symbol>
+    </Access>
+    <Call UId="23">
+      <CallInfo Name="deviceSensor" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="24">
+          <Component Name="instDeviceSensor_010BX1" />
+        </Instance>
+        <Parameter Name="inSensor" Section="Input" Type="Bool" />
+        <Parameter Name="checkOnFault" Section="Input" Type="Bool" />
+        <Parameter Name="checkOffFault" Section="Input" Type="Bool" />
+        <Parameter Name="externalFault" Section="Input" Type="Bool" />
+        <Parameter Name="faultReset" Section="Input" Type="Bool" />
+        <Parameter Name="speedHz" Section="Input" Type="Real" />
+        <Parameter Name="speedMin" Section="Input" Type="Real" />
+        <Parameter Name="speedMax" Section="Input" Type="Real" />
+        <Parameter Name="distanceMin" Section="Input" Type="Real" />
+        <Parameter Name="distanceMax" Section="Input" Type="Real" />
+        <Parameter Name="outSignal" Section="Output" Type="Bool" />
+        <Parameter Name="outFault" Section="Output" Type="Bool" />
+        <Parameter Name="sensorData" Section="InOut" Type="&quot;typeSensor&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="36">
+      <Powerrail />
+      <NameCon UId="23" Name="en" />
+    </Wire>
+    <Wire UId="37">
+      <OpenCon UId="25" />
+      <NameCon UId="23" Name="inSensor" />
+    </Wire>
+    <Wire UId="38">
+      <OpenCon UId="26" />
+      <NameCon UId="23" Name="checkOnFault" />
+    </Wire>
+    <Wire UId="39">
+      <OpenCon UId="27" />
+      <NameCon UId="23" Name="checkOffFault" />
+    </Wire>
+    <Wire UId="40">
+      <OpenCon UId="28" />
+      <NameCon UId="23" Name="externalFault" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="21" />
+      <NameCon UId="23" Name="faultReset" />
+    </Wire>
+    <Wire UId="42">
+      <OpenCon UId="29" />
+      <NameCon UId="23" Name="speedHz" />
+    </Wire>
+    <Wire UId="43">
+      <OpenCon UId="30" />
+      <NameCon UId="23" Name="speedMin" />
+    </Wire>
+    <Wire UId="44">
+      <OpenCon UId="31" />
+      <NameCon UId="23" Name="speedMax" />
+    </Wire>
+    <Wire UId="45">
+      <OpenCon UId="32" />
+      <NameCon UId="23" Name="distanceMin" />
+    </Wire>
+    <Wire UId="46">
+      <OpenCon UId="33" />
+      <NameCon UId="23" Name="distanceMax" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="22" />
+      <NameCon UId="23" Name="sensorData" />
+    </Wire>
+    <Wire UId="48">
+      <NameCon UId="23" Name="outSignal" />
+      <OpenCon UId="34" />
+    </Wire>
+    <Wire UId="49">
+      <NameCon UId="23" Name="outFault" />
+      <OpenCon UId="35" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="9" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="B" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Sensor 1 Ind.s. (30BX1)</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="D" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="E" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>
