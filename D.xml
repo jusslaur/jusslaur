@@ -1,0 +1,944 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="filterAlarmWords" Datatype="Array[0..10] of Word">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Filter alarm words for HMI</MultiLanguageText>
+      </Comment>
+      <Subelement Path="0">
+        <StartValue>16#0000</StartValue>
+      </Subelement>
+      <Subelement Path="1">
+        <StartValue>16#0000</StartValue>
+      </Subelement>
+      <Subelement Path="2">
+        <StartValue>16#0000</StartValue>
+      </Subelement>
+      <Subelement Path="3">
+        <StartValue>16#0000</StartValue>
+      </Subelement>
+      <Subelement Path="4">
+        <StartValue>16#0000</StartValue>
+      </Subelement>
+      <Subelement Path="5">
+        <StartValue>16#0000</StartValue>
+      </Subelement>
+      <Subelement Path="6">
+        <StartValue>16#0000</StartValue>
+      </Subelement>
+      <Subelement Path="7">
+        <StartValue>16#0000</StartValue>
+      </Subelement>
+      <Subelement Path="8">
+        <StartValue>16#0000</StartValue>
+      </Subelement>
+      <Subelement Path="9">
+        <StartValue>16#0000</StartValue>
+      </Subelement>
+      <Subelement Path="10">
+        <StartValue>16#0000</StartValue>
+      </Subelement>
+    </Member>
+    <Member Name="filterWarningWords" Datatype="Array[0..10] of Word">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Filter warning words for HMI</MultiLanguageText>
+      </Comment>
+      <Subelement Path="0">
+        <StartValue>16#0000</StartValue>
+      </Subelement>
+      <Subelement Path="1">
+        <StartValue>16#0000</StartValue>
+      </Subelement>
+      <Subelement Path="2">
+        <StartValue>16#0000</StartValue>
+      </Subelement>
+      <Subelement Path="3">
+        <StartValue>16#0000</StartValue>
+      </Subelement>
+      <Subelement Path="4">
+        <StartValue>16#0000</StartValue>
+      </Subelement>
+      <Subelement Path="5">
+        <StartValue>16#0000</StartValue>
+      </Subelement>
+      <Subelement Path="6">
+        <StartValue>16#0000</StartValue>
+      </Subelement>
+      <Subelement Path="7">
+        <StartValue>16#0000</StartValue>
+      </Subelement>
+      <Subelement Path="8">
+        <StartValue>16#0000</StartValue>
+      </Subelement>
+      <Subelement Path="9">
+        <StartValue>16#0000</StartValue>
+      </Subelement>
+      <Subelement Path="10">
+        <StartValue>16#0000</StartValue>
+      </Subelement>
+    </Member>
+    <Member Name="----------- FILTER -----------" Datatype="Array[0..10] of Word" />
+    <Member Name="010" Datatype="&quot;typeDevice&quot;" Remanence="Retain">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">placeholder</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="signals" Datatype="&quot;typeDevice.Signals&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="controlCircuit" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="controlEnabled" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="MCB" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+                <Member Name="safetySwitch" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+                <Member Name="reset" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="control" Datatype="&quot;typeDevice.Control&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="enableAuto" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+                <Member Name="enableManualForward" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+                <Member Name="enableManualReverse" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+                <Member Name="forward" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="reverse" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="outputStop" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="reset" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="status" Datatype="&quot;typeDevice.Status&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="ready" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="safetyInterlock" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="interlock" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="commOk" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+                <Member Name="running" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="runningForward" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="runningReverse" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="acceleration" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="deceleration" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="ipos" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+                <Member Name="driveReady" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+                <Member Name="inPosition" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+                <Member Name="brakeReleased" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+                <Member Name="limitCW" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="limitCCW" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="fault" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="faultCode" Datatype="Word">
+                  <StartValue>16#0000</StartValue>
+                </Member>
+                <Member Name="commStatusCode" Datatype="Int">
+                  <StartValue>10</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="buttons" Datatype="&quot;typeDevice.Buttons&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="auto" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="manual" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="manualForward" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="manualReverse" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="homing" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="hmiForward" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="hmiReverse" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="hmiReset" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="hmiHoming" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="cyclicPause" Datatype="&quot;typeDevice.CyclicPause&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="enabled" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+                <Member Name="active" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="method" Datatype="Int">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="objectSensor" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="immediateRun" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="immediatePause" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="runTime" Datatype="DInt">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="runCurrentTime" Datatype="DInt">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="pauseTime" Datatype="DInt">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="pauseCurrentTime" Datatype="DInt">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="pauseObjects" Datatype="DInt">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="pauseCurrentObjects" Datatype="DInt">
+                  <StartValue>0</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="speedSetpoints" Datatype="&quot;typeDevice.SpeedSetpoints&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="auto" Datatype="Real">
+                  <StartValue>50.0</StartValue>
+                </Member>
+                <Member Name="manual" Datatype="Real">
+                  <StartValue>40.0</StartValue>
+                </Member>
+                <Member Name="reverse" Datatype="Real">
+                  <StartValue>30.0</StartValue>
+                </Member>
+                <Member Name="external" Datatype="Real">
+                  <StartValue>30.0</StartValue>
+                </Member>
+                <Member Name="minimum" Datatype="Real">
+                  <StartValue>10.0</StartValue>
+                </Member>
+                <Member Name="maximum" Datatype="Real">
+                  <StartValue>100.0</StartValue>
+                </Member>
+                <Member Name="low" Datatype="Real">
+                  <StartValue>25.0</StartValue>
+                </Member>
+                <Member Name="high" Datatype="Real">
+                  <StartValue>75.0</StartValue>
+                </Member>
+                <Member Name="gearRatio" Datatype="Real">
+                  <StartValue>1.0</StartValue>
+                </Member>
+                <Member Name="setpoint" Datatype="Real">
+                  <StartValue>48.4</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="speedActual" Datatype="&quot;typeDevice.SpeedActual&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="actualHz" Datatype="Real">
+                  <StartValue>0.0</StartValue>
+                </Member>
+                <Member Name="actualMmS" Datatype="Real">
+                  <StartValue>0.0</StartValue>
+                </Member>
+                <Member Name="actualMMin" Datatype="Real">
+                  <StartValue>0.0</StartValue>
+                </Member>
+                <Member Name="actualKmH" Datatype="Real">
+                  <StartValue>0.0</StartValue>
+                </Member>
+                <Member Name="actualPulsesSec" Datatype="Real">
+                  <StartValue>0.0</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="position" Datatype="&quot;typeDevice.Position&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="statusCode" Datatype="Int">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="useActualEncoder" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="actualEncoder" Datatype="DInt">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="virtualEncoder" Datatype="DInt">
+                  <StartValue>502903</StartValue>
+                </Member>
+                <Member Name="setpointValue" Datatype="DInt">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="direction" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="pulsesPerTurnSet" Datatype="DInt">
+                  <StartValue>400</StartValue>
+                </Member>
+                <Member Name="microPerPulse" Datatype="DInt">
+                  <StartValue>4200</StartValue>
+                </Member>
+                <Member Name="pulsesPerSecondAt50Hz" Datatype="DInt">
+                  <StartValue>250</StartValue>
+                </Member>
+                <Member Name="activationTime" Datatype="Int">
+                  <StartValue>1000</StartValue>
+                </Member>
+                <Member Name="activationPulses" Datatype="DInt">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="actualDistanceMm" Datatype="LReal">
+                  <StartValue>0.0</StartValue>
+                </Member>
+                <Member Name="destinationDistance" Datatype="LReal">
+                  <StartValue>0.0</StartValue>
+                </Member>
+                <Member Name="distanceForwardMm" Datatype="UDInt">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="distanceReverseMm" Datatype="UDInt">
+                  <StartValue>0</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="timers" Datatype="&quot;typeDevice.Timers&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="startDelay" Datatype="Time">
+                  <StartValue>T#100MS</StartValue>
+                </Member>
+                <Member Name="stopDelay" Datatype="Time">
+                  <StartValue>T#100MS</StartValue>
+                </Member>
+                <Member Name="feedback" Datatype="Time">
+                  <StartValue>T#5S</StartValue>
+                </Member>
+                <Member Name="networkFault" Datatype="Time">
+                  <StartValue>T#1S</StartValue>
+                </Member>
+                <Member Name="restartDelay" Datatype="Time">
+                  <StartValue>T#500MS</StartValue>
+                </Member>
+                <Member Name="restartRemaining" Datatype="Time">
+                  <StartValue>T#0MS</StartValue>
+                </Member>
+                <Member Name="manualForwardDurationMax" Datatype="Time">
+                  <StartValue>T#0MS</StartValue>
+                </Member>
+                <Member Name="manualReverseDurationMax" Datatype="Time">
+                  <StartValue>T#0MS</StartValue>
+                </Member>
+                <Member Name="rotationControl1" Datatype="Time">
+                  <StartValue>T#10S</StartValue>
+                </Member>
+                <Member Name="rotationControl2" Datatype="Time">
+                  <StartValue>T#10S</StartValue>
+                </Member>
+                <Member Name="rotationControl3" Datatype="Time">
+                  <StartValue>T#10S</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="motorInfo" Datatype="&quot;typeDevice.MotorInfo&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="manufacturer" Datatype="WString">
+                  <StartValue>WSTRING#'N/A'</StartValue>
+                </Member>
+                <Member Name="type" Datatype="WString">
+                  <StartValue>WSTRING#'N/A'</StartValue>
+                </Member>
+                <Member Name="voltage" Datatype="Int">
+                  <StartValue>400</StartValue>
+                </Member>
+                <Member Name="frequency" Datatype="Int">
+                  <StartValue>50</StartValue>
+                </Member>
+                <Member Name="phase" Datatype="Int">
+                  <StartValue>3</StartValue>
+                </Member>
+                <Member Name="current" Datatype="Real">
+                  <StartValue>240.0</StartValue>
+                </Member>
+                <Member Name="power" Datatype="Real">
+                  <StartValue>0.0</StartValue>
+                </Member>
+                <Member Name="powerFactor" Datatype="Real">
+                  <StartValue>0.0</StartValue>
+                </Member>
+                <Member Name="speed" Datatype="Int">
+                  <StartValue>1000</StartValue>
+                </Member>
+                <Member Name="efficiency" Datatype="Int">
+                  <StartValue>0</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="inverterInfo" Datatype="&quot;typeDevice.InverterInfo&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="accelerationTime" Datatype="Real">
+                  <StartValue>0.0</StartValue>
+                </Member>
+                <Member Name="decelerationTime" Datatype="Real">
+                  <StartValue>0.0</StartValue>
+                </Member>
+                <Member Name="stallPrevention" Datatype="Real">
+                  <StartValue>0.0</StartValue>
+                </Member>
+                <Member Name="currentWarningPercentage" Datatype="Real">
+                  <StartValue>150.0</StartValue>
+                </Member>
+                <Member Name="currentAlarmPercentage" Datatype="Real">
+                  <StartValue>180.0</StartValue>
+                </Member>
+                <Member Name="currentWarning" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="currentAlarm" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="motorLoad" Datatype="&quot;typeDevice.MotorLoad&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="outputFrequency" Datatype="Real">
+                  <StartValue>0.0</StartValue>
+                </Member>
+                <Member Name="outputCurrent" Datatype="Real">
+                  <StartValue>0.0</StartValue>
+                </Member>
+                <Member Name="outputVoltage" Datatype="Real">
+                  <StartValue>0.0</StartValue>
+                </Member>
+                <Member Name="outputPower" Datatype="Real">
+                  <StartValue>0.0</StartValue>
+                </Member>
+                <Member Name="motorSpeed" Datatype="Int">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="motorTorque" Datatype="Real">
+                  <StartValue>0.0</StartValue>
+                </Member>
+                <Member Name="motorLoadFactor" Datatype="Real">
+                  <StartValue>0.0</StartValue>
+                </Member>
+                <Member Name="inverterDcBusVoltage" Datatype="Real">
+                  <StartValue>565.0</StartValue>
+                </Member>
+                <Member Name="motorThermalLoad" Datatype="Real">
+                  <StartValue>0.0</StartValue>
+                </Member>
+                <Member Name="inverterThermalLoad" Datatype="Real">
+                  <StartValue>0.0</StartValue>
+                </Member>
+                <Member Name="operationTime" Datatype="Int">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="cumulativePower" Datatype="Int">
+                  <StartValue>0</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="overload" Datatype="&quot;typeDevice.Overload&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="overloadPercentage" Datatype="Array[0..2] of Int">
+                  <Subelement Path="0">
+                    <StartValue>150</StartValue>
+                  </Subelement>
+                  <Subelement Path="1">
+                    <StartValue>150</StartValue>
+                  </Subelement>
+                  <Subelement Path="2">
+                    <StartValue>150</StartValue>
+                  </Subelement>
+                </Member>
+                <Member Name="useExternal" Datatype="Array[0..2] of Int">
+                  <Subelement Path="0">
+                    <StartValue>0</StartValue>
+                  </Subelement>
+                  <Subelement Path="1">
+                    <StartValue>0</StartValue>
+                  </Subelement>
+                  <Subelement Path="2">
+                    <StartValue>0</StartValue>
+                  </Subelement>
+                </Member>
+                <Member Name="useTimeOrEncoder" Datatype="Array[0..2] of Int">
+                  <Subelement Path="0">
+                    <StartValue>0</StartValue>
+                  </Subelement>
+                  <Subelement Path="1">
+                    <StartValue>0</StartValue>
+                  </Subelement>
+                  <Subelement Path="2">
+                    <StartValue>0</StartValue>
+                  </Subelement>
+                </Member>
+                <Member Name="onDelayTime" Datatype="Array[0..2] of Time">
+                  <Subelement Path="0">
+                    <StartValue>T#1S</StartValue>
+                  </Subelement>
+                  <Subelement Path="1">
+                    <StartValue>T#1S</StartValue>
+                  </Subelement>
+                  <Subelement Path="2">
+                    <StartValue>T#1S</StartValue>
+                  </Subelement>
+                </Member>
+                <Member Name="offDelayTime" Datatype="Array[0..2] of Time">
+                  <Subelement Path="0">
+                    <StartValue>T#1S</StartValue>
+                  </Subelement>
+                  <Subelement Path="1">
+                    <StartValue>T#1S</StartValue>
+                  </Subelement>
+                  <Subelement Path="2">
+                    <StartValue>T#1S</StartValue>
+                  </Subelement>
+                </Member>
+                <Member Name="onDelayPulses" Datatype="Array[0..2] of DInt">
+                  <Subelement Path="0">
+                    <StartValue>100</StartValue>
+                  </Subelement>
+                  <Subelement Path="1">
+                    <StartValue>100</StartValue>
+                  </Subelement>
+                  <Subelement Path="2">
+                    <StartValue>100</StartValue>
+                  </Subelement>
+                </Member>
+                <Member Name="offDelayPulses" Datatype="Array[0..2] of DInt">
+                  <Subelement Path="0">
+                    <StartValue>100</StartValue>
+                  </Subelement>
+                  <Subelement Path="1">
+                    <StartValue>100</StartValue>
+                  </Subelement>
+                  <Subelement Path="2">
+                    <StartValue>100</StartValue>
+                  </Subelement>
+                </Member>
+                <Member Name="overloadOutput" Datatype="Array[0..2] of Int">
+                  <Subelement Path="0">
+                    <StartValue>0</StartValue>
+                  </Subelement>
+                  <Subelement Path="1">
+                    <StartValue>0</StartValue>
+                  </Subelement>
+                  <Subelement Path="2">
+                    <StartValue>0</StartValue>
+                  </Subelement>
+                </Member>
+                <Member Name="slowAmount" Datatype="Array[0..2] of Int">
+                  <Subelement Path="0">
+                    <StartValue>20</StartValue>
+                  </Subelement>
+                  <Subelement Path="1">
+                    <StartValue>20</StartValue>
+                  </Subelement>
+                  <Subelement Path="2">
+                    <StartValue>20</StartValue>
+                  </Subelement>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="maintenance" Datatype="&quot;typeDevice.Maintenances&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="maintenance1" Datatype="&quot;typeDevice.Maintenance&quot;">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="operationTime" Datatype="Int">
+                        <StartValue>0</StartValue>
+                      </Member>
+                      <Member Name="engineerId" Datatype="Int">
+                        <StartValue>0</StartValue>
+                      </Member>
+                      <Member Name="engineerName" Datatype="WString">
+                        <StartValue>WSTRING#'N/A'</StartValue>
+                      </Member>
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="maintenance2" Datatype="&quot;typeDevice.Maintenance&quot;">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="operationTime" Datatype="Int">
+                        <StartValue>0</StartValue>
+                      </Member>
+                      <Member Name="engineerId" Datatype="Int">
+                        <StartValue>0</StartValue>
+                      </Member>
+                      <Member Name="engineerName" Datatype="WString">
+                        <StartValue>WSTRING#'N/A'</StartValue>
+                      </Member>
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="maintenance3" Datatype="&quot;typeDevice.Maintenance&quot;">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="operationTime" Datatype="Int">
+                        <StartValue>0</StartValue>
+                      </Member>
+                      <Member Name="engineerId" Datatype="Int">
+                        <StartValue>0</StartValue>
+                      </Member>
+                      <Member Name="engineerName" Datatype="WString">
+                        <StartValue>WSTRING#'N/A'</StartValue>
+                      </Member>
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="maintenance4" Datatype="&quot;typeDevice.Maintenance&quot;">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="operationTime" Datatype="Int">
+                        <StartValue>0</StartValue>
+                      </Member>
+                      <Member Name="engineerId" Datatype="Int">
+                        <StartValue>0</StartValue>
+                      </Member>
+                      <Member Name="engineerName" Datatype="WString">
+                        <StartValue>WSTRING#'N/A'</StartValue>
+                      </Member>
+                    </Section>
+                  </Sections>
+                </Member>
+                <Member Name="maintenance5" Datatype="&quot;typeDevice.Maintenance&quot;">
+                  <Sections>
+                    <Section Name="None">
+                      <Member Name="operationTime" Datatype="Int">
+                        <StartValue>0</StartValue>
+                      </Member>
+                      <Member Name="engineerId" Datatype="Int">
+                        <StartValue>0</StartValue>
+                      </Member>
+                      <Member Name="engineerName" Datatype="WString">
+                        <StartValue>WSTRING#'N/A'</StartValue>
+                      </Member>
+                    </Section>
+                  </Sections>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="statistics" Datatype="&quot;typeDevice.Statistics&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="runtime" Datatype="DInt">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="savedRuntime" Datatype="DInt">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="startForwardAmount" Datatype="DInt">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="startReverseAmount" Datatype="DInt">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="alarmsAmount" Datatype="DInt">
+                  <StartValue>0</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="alarms" Datatype="&quot;typeDevice.Alarms&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="noControl" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+                <Member Name="MCB" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="safetySwitch" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="feedback" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="inverterFault" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="inverterNoControl" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="commFault" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="overload" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="rotationCheck1" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="rotationCheck2" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="rotationCheck3" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="safetyFeedback" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="reserve13" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="reserve14" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="reserve15" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="reserve16" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="alarmWord" Datatype="Word">
+                  <StartValue>16#0000</StartValue>
+                </Member>
+                <Member Name="inverterFaultCodeLast" Datatype="Int">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="inverterFaultCodeLast_1" Datatype="Int">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="inverterFaultCodeLast_2" Datatype="Int">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="inverterFaultCodeLast_3" Datatype="Int">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="inverterFaultCodeLast_4" Datatype="Int">
+                  <StartValue>0</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="warnings" Datatype="&quot;typeDevice.Warnings&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="warningWord" Datatype="Word">
+                  <StartValue>16#0000</StartValue>
+                </Member>
+                <Member Name="w1" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="w2" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="w3" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="w4" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="w5" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="w6" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="w7" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="w8" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="w9" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="w10" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="w11" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="w12" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="w13" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="w14" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="w15" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+                <Member Name="w16" Datatype="Bool">
+                  <StartValue>FALSE</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="HMIstatus" Datatype="&quot;typeDevice.HMIstatus&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="deviceHmiColor" Datatype="Int">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="deviceStatusWord" Datatype="Word">
+                  <StartValue>16#0003</StartValue>
+                </Member>
+                <Member Name="sensor1HmiColor" Datatype="Int">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="sensor2HmiColor" Datatype="Int">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="sensor3HmiColor" Datatype="Int">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="sensor4HmiColor" Datatype="Int">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="sensor5HmiColor" Datatype="Int">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="sensor6HmiColor" Datatype="Int">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="sensor7HmiColor" Datatype="Int">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="sensor8HmiColor" Datatype="Int">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="sensor9HmiColor" Datatype="Int">
+                  <StartValue>0</StartValue>
+                </Member>
+                <Member Name="sensor10HmiColor" Datatype="Int">
+                  <StartValue>0</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <IsRetainMemResEnabled>true</IsRetainMemResEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>400</MemoryReserve>
+      <Name>D</Name>
+      <Namespace />
+      <Number>6</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+      <RetainMemoryReserve>100</RetainMemoryReserve>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="3" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>
