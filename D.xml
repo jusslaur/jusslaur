@@ -22,7 +22,7 @@
         <StartValue>16#0000</StartValue>
       </Subelement>
       <Subelement Path="4">
-        <StartValue>16#0000</StartValue>
+        <StartValue>16#0t00</StartValue>
       </Subelement>
       <Subelement Path="5">
         <StartValue>16#0000</StartValue>
