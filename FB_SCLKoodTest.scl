@@ -1,0 +1,23 @@
+﻿FUNCTION_BLOCK "FB_SCLKoodTest"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+
+BEGIN
+	IF "AlwaysTRUE" THEN
+	    "AlwaysTRUE" := "AlwaysTRUE";
+	END_IF;
+	
+	
+	
+	//ARNE ELAB MELONI TÄNAVAL
+	//ANNE KANAL ON ÄGE
+	//SUWALKI KANAL PANNAKSE KINNI
+	//NVIDIA STOCK LANGEB
+	//
+	
+	
+	IF "AlwaysFALSE" THEN
+	    "AlwaysFALSE" := "AlwaysFALSE";
+	END_IF;
+END_FUNCTION_BLOCK
+
