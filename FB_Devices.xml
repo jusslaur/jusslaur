@@ -53,7 +53,7 @@
   <Parts>
     <Access Scope="GlobalVariable" UId="21">
       <Symbol>
-        <Component Name="alwaysTrue" />
+        <Component Name="mControlEnable" />
       </Symbol>
     </Access>
     <Access Scope="GlobalVariable" UId="22">
