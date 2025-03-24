@@ -19,7 +19,7 @@
       <Sections>
         <Section Name="None">
           <Member Name="name" Datatype="WString">
-            <StartValue>WSTRING#'F1'</StartValue>
+            <StartValue>INT#'F1'</StartValue>
           </Member>
           <Member Name="signal" Datatype="Bool">
             <StartValue>TRUE</StartValue>
